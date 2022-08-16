@@ -675,6 +675,7 @@ body {
     width: 20%;
     overflow: hidden;
     border-radius: 15px;
+    height: min-content;
 }
 
 .listProjects>li .listProjects__description {
