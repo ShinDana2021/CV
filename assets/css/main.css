@@ -669,15 +669,17 @@ body {
     font-size: 1.6rem;
     display: flex;    
     border-bottom: 1px solid #aaaaaa;
+    align-items: center;
 }
 
 .listProjects>li .listProjects__image {
     width: 20%;
     overflow: hidden;
     border-radius: 15px;
-    height: min-content;
 }
-
+.listProjects>li>.listProjects__image>img {
+    object-fit: contain;
+}
 .listProjects>li .listProjects__description {
     width: 80%;
     padding-left: 100px;
@@ -713,7 +715,7 @@ body {
 }
 
 .listProjects__description> .tech>span {
-    padding: 10px;
+    padding: 5px;
     border-radius: 40px;
     background-color: #04b4e0;
     display: block;
@@ -1170,7 +1172,7 @@ body {
     }
 }
 
-@media(max-width:500px) {
+@media(max-width:511px) {
 
     /* Tóm tắt mobile */
     .timeline-item {
@@ -1194,11 +1196,50 @@ body {
 
     /* Hoạt động */
     .listProjects__description>.tech >span:nth-child(3){
-        line-height: unset;
+        /* line-height: unset; */
         height: 3.2rem;
+    }
+
+    .listProjects__description .tech {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .listProjects__description .tech >span {
+        margin-bottom: 10px;
+        line-height: 3rem;
     }
 
 }
 
 
+@media(max-width: 467px) {
+    .listProjects__description .tech {
+        flex-wrap: wrap;
+    }
 
+   
+}
+
+/* Reponsive Tablet */
+@media (min-width: 741px) and (max-width:1024px) {
+
+    .listProjects >li {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 25px;
+    }
+
+    .listProjects>li .listProjects__description {
+        padding-left: 0;
+    }
+
+    .listProjects>li .listProjects__image {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .blog {
+        text-align: center;
+    }
+}
