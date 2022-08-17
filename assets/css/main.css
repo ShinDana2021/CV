@@ -1243,3 +1243,13 @@ body {
         text-align: center;
     }
 }
+
+@media (min-width: 1025px) {
+    .listProjects__image {
+        height: 150px;
+    }
+    .listProjects__image>img {
+        height: 100%;
+        border-radius: 10px;
+    }
+}
